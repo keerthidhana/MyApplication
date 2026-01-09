@@ -1,0 +1,32 @@
+name: Build Application with Dependencies
+ 
+# When should this run?
+on:
+  push:
+    branches:
+      - main
+ 
+# What job should run?
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    # Steps inside the job
+    steps:
+      # Step 1: Get the code
+      - name: Checkout code
+        uses: actions/checkout@v4
+ 
+      # Step 2: Install Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+ 
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+ 
+      # Step 4: Build the application
+      - name: Build application
+        run: npm run build
