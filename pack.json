@@ -1,12 +1,1 @@
-###
-{
-  "name": "simple-app",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "echo Building application...",
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
-  }
-}
+Hello Hi
